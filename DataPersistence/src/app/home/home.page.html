@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Status App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+<div style="text-align: center;">
+  <br>
+    <ion-title>Your latest status is: {{myStatus}}</ion-title>
+    <ion-button [routerLink]="['/status']">UPDATE STATUS</ion-button>
+</div>
+
+</ion-content>
