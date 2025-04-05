@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
   imports: [IonButton, IonRadioGroup, IonRadio, IonList, IonItem, IonLabel, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,IonButtons,IonBackButton]
 })
 export class StatusPage implements OnInit {
-
+  // Inject the Storage and Router services
   constructor(private storage:Storage, private router:Router) {
    }
   
@@ -22,10 +22,12 @@ export class StatusPage implements OnInit {
   ngOnInit() {
   }
 
+  // Function to handle button click
   async onButtonClick(){
-    await this.storage.create();
-    await this.storage.set("status",this.status);
-    this.router.navigate(['/home']);
+    await this.storage.create(); // Initialize storage
+    await this.storage.set("status",this.status); // Save status
+    this.router.navigate(['/home']); // Navigate to home page
+
   }
 
 }
