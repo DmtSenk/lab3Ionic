@@ -1,5 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <!-- Button group on the start -->
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -8,7 +9,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <!-- List to group status options -->
   <ion-list>
+    !-- Radio group bound to status using two-way data bindin -->
     <ion-radio-group [(ngModel)]="status">
       <ion-item>
         <ion-label>Happy</ion-label>
@@ -28,6 +31,7 @@
       </ion-item>
     </ion-radio-group>
   </ion-list>
+  <!-- Button to trigger onButtonClick() func -->
   <ion-button (click)="onButtonClick()">Save</ion-button>
 
 </ion-content>
