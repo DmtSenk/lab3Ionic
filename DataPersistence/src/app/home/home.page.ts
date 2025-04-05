@@ -11,11 +11,12 @@ import { Storage } from '@ionic/storage-angular';
 })
 export class HomePage {
   myStatus:string = "";
-  constructor(private storage:Storage) {}
-  
+  constructor(private storage:Storage) {} // Inject the Storage service
+
+  //When the view is about to be entered
   async ionViewWillEnter(){
-    await this.storage.create();
-    this.myStatus = await this.storage.get('status');
+    await this.storage.create(); // Initialize the Storage
+    this.myStatus = await this.storage.get('status'); // Retrieve the stored status
   }
 
 }
